@@ -15,34 +15,39 @@
   </head>
   <body>
     <div class="container">
-      <h2>Currency Converter</h2>
-      <form>
-        <div class="amount">
-          <p>Enter Amount</p>
-          <input value="1" type="text" />
+      <div class="key">
+        <a target="_blank" href="https://www.exchangerate-api.com/"></a>
+      </div>
+    
+    
+      <div class="currency-container">
+        <h1>Currency<br>Converter</h1>
+        <div class="input-box">
+          <label for="amount">Enter amount</label>
+          <input type="text" id="amount" placeholder="100" required />
         </div>
-        <div class="dropdown">
-          <div class="from">
-            <p>From</p>
-            <div class="select-container">
-              <img src="https://flagsapi.com/US/flat/64.png" />
-              <select name="from"></select>
-            </div>
+        <div class="currency">
+          <div class="box">
+            <select class="select-option" name="from-currency" id="fromCurrency">
+              <option value="USD">United States Dollar</option>
+            </select>
           </div>
-          <i class="fa-solid fa-arrow-right-arrow-left"></i>
-          <div class="to">
-            <p>To</p>
-            <div class="select-container">
-              <img src="https://flagsapi.com/IN/flat/64.png" />
-              <select name="to"></select>
-            </div>
+          <div>
+            <span>TO</span>
           </div>
+          <div class="box">
+            <select class="select-option" name="to-currency" id="toCurrency">
+              <option value="USD">United States Dollar</option>
+            </select>
+          </div>
+          <button class="convert">Convert</button>
+          <p class="result"></p>
+          <p class="error"></p>
+    
         </div>
-        <div class="msg">1USD = 80INR</div>
-        <button>Get Exchange Rate</button>
-      </form>
+      </div>
     </div>
-    <script src="codes.js"></script>
+      <script src="codes.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
